@@ -1,0 +1,19 @@
+export class Pokemon {
+    id!:string;
+    imagen!:string;
+    apodo!:string;
+    generoPokemon!:number;
+    nombre!:string;
+    nombreSprite!:string;
+    tipo!:string;
+    habilidades!:string;
+    experiencia!:number;
+    estatura!:number;
+    peso!:number;
+    salud!:number;
+    ataque!:number;
+    defensa!:number;
+    ataqueEspecial!:number;
+    defensaEspecial!:number;
+    velocidad!:number;
+}

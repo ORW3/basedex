@@ -1,0 +1,165 @@
+<div class="fondo">
+    <img src="assets/img/river_underwater.png" id="paisaje">
+    <img src="assets/img/feebas.gif" id="feebas">
+    <img src="assets/img/magikarp.gif" id="magikarp">
+    <img src="assets/img/magikarp.gif" id="magikarp-juego">
+    <div id="magikarp-gemelo" onmouseover="moverse()"></div>
+    <div id="agua"></div>
+    <div id="particles"></div>
+    <img src="assets/img/horsea.png" id="horsea">
+    <div id="pc" name="PC">
+        <img src="assets/img/pc.png" id="pc-img">
+        <div id="bibli-pagina" class="text-center"></div>
+        <div id="bibli-info" class="text-center" [innerHTML]="informacion"></div>
+        <img id="bibli-img" [src]='rutaImagen'>
+        <div id="bibli" class="bibli">
+            <div class="row row-cols-6 tabla-poke">
+                <div class="contenedor-pokemon" class="col" style="height: 20px;" *ngFor="let pokemon of pokemones">
+                    <span class="pokesprite pokemon {{pokemon.nombreSprite}}" (click)="selectPokemon(pokemon)"
+                        (mouseleave)="this.quitarImagen()" (mouseenter)="this.cambiarImagen(pokemon)"
+                        onclick="agregar2()"></span>
+                </div>
+            </div>
+            <div class="row botones-pag">
+                <div class="col text-center">
+                    <button id="prevPage"><img src="assets/img/prev.png"></button>
+                    <button id="nextPage"><img src="assets/img/next.png"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="agregar" name="Guardar en PC">
+        <form id="formulario-pokemon">
+            <fieldset id="fieldset-pokemon">
+                <img onerror="this.src='assets/img/missingno.png'" src="assets/img/missingno.png"
+                    class="img-fluid mx-auto d-block mt-2" id="perfil-img" alt="">
+                <div style="display: none;">
+                    <label class="form-label mt-2">URL</label>
+                    <input type="text" id="imagen-pokemon" name="imagen" class="form-control"
+                        [(ngModel)]="pokemon.imagen" required>
+                </div>
+                <div>
+                    <label class="form-label mt-2">Apodo</label>
+                    <input type="text" name="apodo" class="form-control" id="apodo" placeholder="Ingrese un apodo"
+                        [(ngModel)]="pokemon.apodo" required>
+                </div>
+                <div>
+                    <label class="form-label mt-2">Género</label>
+                    <select [(ngModel)]="pokemon.generoPokemon" id="genero" name="genero" class="form-select">
+                        <option *ngFor="let genero of generos" value="{{ genero.idAlternativo }}">
+                            {{ genero.genero }}
+                        </option>
+                    </select>
+                </div>
+                <div>
+                    <label class="form-label mt-2">Pókemon</label>
+                    <input type="search" id="input-box" name="nombre" class="input-box form-control me-sm-2"
+                        placeholder="Buscar Pokémon" autocomplete="off" [(ngModel)]="pokemon.nombre" required />
+                    <div class="search-result" id="search-result" autocomplete="on"></div>
+                    <small id="ayudaPokemon" class="form-text text-muted">Con esto completaremos los datos de tu
+                        Pokémon.</small>
+                </div>
+                <div style="display: none;">
+                    <label class="form-label mt-2">Name</label>
+                    <input type="text" class="form-control" name="nombreSprite" id="name" placeholder="Name-id"
+                        [(ngModel)]="pokemon.nombreSprite">
+                </div>
+                <div class="añadir-tipo" id="añadir-tipo-id">
+                    <label class="form-label mt-2">Tipo</label>
+                    <input style="display: none;" name="tipo" class="form-control" id="tipos-poke" type="text" value=""
+                        disabled="" [(ngModel)]="pokemon.tipo">
+                    <div id="tipoContainer" class="text-center"></div>
+                </div>
+                <div>
+                    <label class="form-label mt-2">Habilidades</label>
+                    <input class="form-control" name="habilidades" id="habilidades" type="text" value="" disabled=""
+                        [(ngModel)]="pokemon.habilidades">
+                </div>
+                <div>
+                    <label class="form-label mt-2">Experiencia Base</label>
+                    <input class="form-control" name="experiencia" id="experiencia" type="number" step="any" disabled=""
+                        [(ngModel)]="pokemon.experiencia">
+                </div>
+                <div>
+                    <label class="form-label mt-2">Estatura (m)</label>
+                    <input class="form-control" name="estatura" id="estatura" type="number" step="any" disabled=""
+                        [(ngModel)]="pokemon.estatura">
+                </div>
+                <div>
+                    <label class="form-label mt-2">Peso (lbs)</label>
+                    <input class="form-control" name="peso" id="peso" type="number" step="any" disabled=""
+                        [(ngModel)]="pokemon.peso">
+                </div>
+                <label class="form-label mt-2">Puntos de salud (PS)</label>
+                <div class="progress">
+                    <input style="display: none;" class="form-control" name="salud" id="salud" type="number" step="any"
+                        disabled="" [(ngModel)]="pokemon.salud">
+                    <div id="salud-barra" class="progress-bar progress-bar-striped progress-bar-animated bg-success"
+                        role="progressbar" aria-valuemin="0" aria-valuemax="255" name="salud-barra"></div>
+                </div>
+                <label class="form-label mt-2">Ataque</label>
+                <div class="progress">
+                    <input style="display: none;" class="form-control" name="ataque" id="ataque" type="number"
+                        step="any" disabled="" [(ngModel)]="pokemon.ataque">
+                    <div id="ataque-barra" class="progress-bar progress-bar-striped progress-bar-animated bg-info"
+                        role="progressbar" aria-valuemin="0" aria-valuemax="255"></div>
+                </div>
+                <label class="form-label mt-2">Defensa</label>
+                <div class="progress">
+                    <input style="display: none;" class="form-control" name="defensa" id="defensa" type="number"
+                        step="any" disabled="" [(ngModel)]="pokemon.defensa">
+                    <div id="defensa-barra" class="progress-bar progress-bar-striped progress-bar-animated bg-warning"
+                        role="progressbar" aria-valuemin="0" aria-valuemax="255" name="defensa-barra"></div>
+                </div>
+                <label class="form-label mt-2">Ataque especial</label>
+                <div class="progress">
+                    <input style="display: none;" class="form-control" name="ataque-especial" id="ataque-especial"
+                        type="number" step="any" disabled="" [(ngModel)]="pokemon.ataqueEspecial">
+                    <div id="ataque-especial-barra"
+                        class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar"
+                        aria-valuemin="0" aria-valuemax="255" name="ataque-especial-barra"></div>
+                </div>
+                <label class="form-label mt-2">Defensa especial</label>
+                <div class="progress">
+                    <input style="display: none;" class="form-control" name="defensa-especial" id="defensa-especial"
+                        type="number" step="any" disabled="" [(ngModel)]="pokemon.defensaEspecial">
+                    <div id="defensa-especial-barra"
+                        class="progress-bar progress-bar-striped progress-bar-animated bg-sucess" role="progressbar"
+                        aria-valuemin="0" aria-valuemax="255" name="defensa-especial-barra"></div>
+                </div>
+                <label class="form-label mt-2">Velocidad</label>
+                <div class="progress mb-2">
+                    <input style="display: none;" class="form-control" name="velocidad" id="velocidad" type="number"
+                        [(ngModel)]="pokemon.velocidad">
+                    <div id="velocidad-barra" class="progress-bar progress-bar-striped progress-bar-animated bg-info"
+                        role="progressbar" aria-valuemin="0" aria-valuemax="255" name="velocidad-barra"></div>
+                </div>
+            </fieldset>
+            <div class="container">
+                <div class="row">
+                    <button type="button" id="insertar-btn" class="col mx-2 btn btn-primary"
+                        (click)="this.insertarPokemon()" onclick="agregar2()">Insertar</button>
+                    <button type="button" class="col mx-2 btn btn-warning" (click)="this.updatePokemon()"
+                        onclick="agregar2()">Modificar</button>
+                    <button type="button" class="col my-2 mx-2 btn btn-danger" (click)="this.deletePokemon(pokemon.id)"
+                        onclick="agregar2()">Eliminar</button>
+                    <button type="button" class="col my-2 mx-2 btn btn-info" (click)="this.limpiarPokemon()" onclick="agregar2()">Limpiar</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div id="acerca" name="Acerca de">
+        <div id="nombres">
+            INTEGRANTES
+            <br><br>
+            Daniel Alberto Cruz Herrera / Carolina Ugalde Serrano / María José Martinez Cayetano / Viviana Itzel Cruz de Jesús
+            <br><br>
+            DS01SV-23
+        </div>
+        <div id="juego">
+            <div class="pokebolas-juego"></div>
+            <img id="pokemon-juego" src="assets/img/pikachu-f.gif">
+            <div id="perder"></div>
+        </div>
+    </div>
+</div>

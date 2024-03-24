@@ -1,0 +1,13 @@
+.navbar-expand-lg {
+    position: fixed;
+    font-family: 'Pixelify Sans';
+    width: 100%;
+    z-index: 1;
+    font-size: xx-large;
+}
+
+#icono-home{
+    filter: brightness(0) invert(1);
+    height: 50px;
+    image-rendering: pixelated;
+}

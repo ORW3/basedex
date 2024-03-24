@@ -1,0 +1,582 @@
+* {
+  margin: 0;
+  padding: 0;
+  letter-spacing: 0.5px;
+  box-sizing: border-box;
+}
+
+.fondo {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+#particles {
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.fondo #paisaje {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+  image-rendering: pixelated;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+#feebas {
+  left: 0px;
+  bottom: 75px;
+  width: 10%;
+  position: absolute;
+  image-rendering: pixelated;
+  z-index: -3;
+  animation: pez 40s cubic-bezier(0.9, 1, 0.3, 0.75) 0s infinite normal;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+#magikarp {
+  left: 0;
+  bottom: 225px;
+  width: 10%;
+  position: absolute;
+  image-rendering: pixelated;
+  z-index: -3;
+  animation: pez 25s cubic-bezier(0.7, 1, 0.3, 0.5) 0s infinite normal;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+@keyframes pez {
+  0% {
+    transform: translate(0vw) scaleX(-1);
+    -webkit-transform: translate(0vw) scaleX(-1);
+    -moz-transform: translate(0vw) scaleX(-1);
+    -ms-transform: translate(0vw) scaleX(-1);
+    -o-transform: translate(0vw) scaleX(-1);
+  }
+
+  10% {
+    transform: translate(20vw, -125px) scaleX(-1);
+    -webkit-transform: translate(20vw, -125px) scaleX(-1);
+    -moz-transform: translate(20vw, -125px) scaleX(-1);
+    -ms-transform: translate(20vw, -125px) scaleX(-1);
+    -o-transform: translate(20vw, -125px) scaleX(-1);
+  }
+
+  20% {
+    transform: translate(40vw, -45px) rotateZ(22deg) scaleX(-1);
+    -webkit-transform: translate(40vw, -45px) rotateZ(22deg) scaleX(-1);
+    -moz-transform: translate(40vw, -45px) rotateZ(22deg) scaleX(-1);
+    -ms-transform: translate(40vw, -45px) rotateZ(22deg) scaleX(-1);
+    -o-transform: translate(40vw, -45px) rotateZ(22deg) scaleX(-1);
+  }
+
+  30% {
+    transform: translate(60vw, -250px) scaleX(-1);
+    -webkit-transform: translate(60vw, -250px) scaleX(-1);
+    -moz-transform: translate(60vw, -250px) scaleX(-1);
+    -ms-transform: translate(60vw, -250px) scaleX(-1);
+    -o-transform: translate(60vw, -250px) scaleX(-1);
+  }
+
+  40% {
+    transform: translate(80vw, -80px) rotateZ(22deg) scaleX(-1);
+    -webkit-transform: translate(80vw, -80px) rotateZ(22deg) scaleX(-1);
+    -moz-transform: translate(80vw, -80px) rotateZ(22deg) scaleX(-1);
+    -ms-transform: translate(80vw, -80px) rotateZ(22deg) scaleX(-1);
+    -o-transform: translate(80vw, -80px) rotateZ(22deg) scaleX(-1);
+  }
+
+  50% {
+    transform: translate(100vw, -145px) scaleX(-1);
+    -webkit-transform: translate(100vw, -145px) scaleX(-1);
+    -moz-transform: translate(100vw, -145px) scaleX(-1);
+    -ms-transform: translate(100vw, -145px) scaleX(-1);
+    -o-transform: translate(100vw, -145px) scaleX(-1);
+  }
+
+  51% {
+    transform: translate(100vw, -145px) rotateY(180deg) scaleX(-1);
+    -webkit-transform: translate(100vw, -145px) rotateY(180deg) scaleX(-1);
+    -moz-transform: translate(100vw, -145px) rotateY(180deg) scaleX(-1);
+    -ms-transform: translate(100vw, -145px) rotateY(180deg) scaleX(-1);
+    -o-transform: translate(100vw, -145px) rotateY(180deg) scaleX(-1);
+  }
+
+  60% {
+    transform: translate(80vw, -80px) rotateY(180deg) rotateZ(22deg) scaleX(-1);
+    -webkit-transform: translate(80vw, -80px) rotateY(180deg) rotateZ(22deg) scaleX(-1);
+    -moz-transform: translate(80vw, -80px) rotateY(180deg) rotateZ(22deg) scaleX(-1);
+    -ms-transform: translate(80vw, -80px) rotateY(180deg) rotateZ(22deg) scaleX(-1);
+    -o-transform: translate(80vw, -80px) rotateY(180deg) rotateZ(22deg) scaleX(-1);
+  }
+
+  70% {
+    transform: translate(60vw, -250px) rotateY(180deg) scaleX(-1);
+    -webkit-transform: translate(60vw, -250px) rotateY(180deg) scaleX(-1);
+    -moz-transform: translate(60vw, -250px) rotateY(180deg) scaleX(-1);
+    -ms-transform: translate(60vw, -250px) rotateY(180deg) scaleX(-1);
+    -o-transform: translate(60vw, -250px) rotateY(180deg) scaleX(-1);
+  }
+
+  80% {
+    transform: translate(40vw, -45px) rotateY(180deg) rotateZ(22deg) scaleX(-1);
+    -webkit-transform: translate(40vw, -45px) rotateY(180deg) rotateZ(22deg) scaleX(-1);
+    -moz-transform: translate(40vw, -45px) rotateY(180deg) rotateZ(22deg) scaleX(-1);
+    -ms-transform: translate(40vw, -45px) rotateY(180deg) rotateZ(22deg) scaleX(-1);
+    -o-transform: translate(40vw, -45px) rotateY(180deg) rotateZ(22deg) scaleX(-1);
+  }
+
+  90% {
+    transform: translate(20vw, -125px) rotateY(180deg) scaleX(-1);
+    -webkit-transform: translate(20vw, -125px) rotateY(180deg) scaleX(-1);
+    -moz-transform: translate(20vw, -125px) rotateY(180deg) scaleX(-1);
+    -ms-transform: translate(20vw, -125px) rotateY(180deg) scaleX(-1);
+    -o-transform: translate(20vw, -125px) rotateY(180deg) scaleX(-1);
+  }
+
+  99% {
+    transform: translate(0vw) rotateY(180deg) rotateZ(22deg) scaleX(-1);
+    -webkit-transform: translate(0vw) rotateY(180deg) rotateZ(22deg) scaleX(-1);
+    -moz-transform: translate(0vw) rotateY(180deg) rotateZ(22deg) scaleX(-1);
+    -ms-transform: translate(0vw) rotateY(180deg) rotateZ(22deg) scaleX(-1);
+    -o-transform: translate(0vw) rotateY(180deg) rotateZ(22deg) scaleX(-1);
+  }
+
+  100% {
+    transform: translate(0vw) scaleX(-1);
+    -webkit-transform: translate(0vw) scaleX(-1);
+    -moz-transform: translate(0vw) scaleX(-1);
+    -ms-transform: translate(0vw) scaleX(-1);
+    -o-transform: translate(0vw) scaleX(-1);
+  }
+}
+
+.fondo #horsea {
+  position: absolute;
+  width: 50%;
+  object-fit: fill;
+  pointer-events: none;
+  image-rendering: pixelated;
+  animation: horsea 8s infinite alternate-reverse;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+@keyframes horsea {
+  from {
+    transform: translateY(20px) rotate(-10deg);
+  }
+
+  to {
+    transform: translateY(60px) rotate(10deg);
+  }
+}
+
+.fondo img#paisaje {
+  z-index: -4;
+  animation: ondulacion 6s ease-in-out alternate infinite;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+@keyframes ondulacion {
+  0%,
+  100% {
+    transform: skew(0deg, 0deg) scale(1.35, 1.35);
+    filter: saturate(100%) invert(0%);
+  }
+
+  25% {
+    filter: saturate(180%) invert(10%);
+  }
+
+  50% {
+    transform: skew(2deg, 2deg) scale(1.35, 1.35);
+    filter: saturate(100%) invert(0%);
+  }
+
+  75% {
+    filter: saturate(150%) invert(20%);
+  }
+}
+
+.fondo img#horsea {
+  z-index: -1;
+  filter: drop-shadow(1.5px 1.5px 4px #040018);
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+.fondo #agua {
+  position: absolute;
+  opacity: .5;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background: linear-gradient(to top, #2305c7, #8ADFC7);
+  z-index: -2;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+/* Ventanas */
+
+#pc {
+  filter: drop-shadow(0.5px 0.5px 4px #040018);
+  height: 320px;
+  width: 480px;
+  background-color: white;
+}
+
+#pc-img {
+  position: relative;
+  image-rendering: pixelated;
+  object-fit: contain;
+  height: 100%;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+#bibli {
+  left: 164px;
+  top: 38px;
+  position: absolute;
+  width: 312px;
+  height: 282px;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  background-image: url('https://media.discordapp.net/attachments/1219525220109389865/1219525327919906816/fondo-pc.png?ex=660b9e77&is=65f92977&hm=ea4896ab038ff3246d3333dea93beecb8137b316cc2eef3a84addcead44f3e8f&=&format=webp&quality=lossless&width=234&height=211');
+  image-rendering: pixelated;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.bibli {
+  cursor: url("https://cdn.discordapp.com/attachments/1219525220109389865/1219528297923350539/puntero.png?ex=660ba13b&is=65f92c3b&hm=b90b9ba998784f59c19f682af60a6571f4a5ebcd03e06121c155539336963d63&") 0 64, auto
+}
+
+.tabla-poke {
+  position: relative;
+  width: 312px;
+  height: 232px;
+  top: 38px;
+  display: flex;
+}
+
+#contendor-pokemon {
+  width: 100%;
+  height: 100%;
+}
+
+.pokesprite {
+  animation: salto2 .5s linear alternate infinite;
+}
+
+.pokesprite:hover{
+  animation: saltoalegre .5s linear alternate infinite;
+}
+
+@keyframes salto {
+  0% {
+    transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+  }
+
+  40% {
+    transform: translate3d(0, 0.2%, 0) scale3d(.8, 1.2, 1);
+  }
+
+  100% {
+    transform: translate3d(0, 0.7%, 0) scale3d(1, .7, 1);
+  }
+}
+
+@keyframes salto2 {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  40% {
+    transform: translate3d(-2%, 2%, 0);
+  }
+  100% {
+    transform: translate3d(-4%, 8%, 0);
+  }
+}
+
+@keyframes saltoalegre {
+  0% {
+    transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+  }
+  40% {
+    transform: translate3d(0, 2%, 0) scale3d(.8, 1.2, 1);
+  }
+  100% {
+    transform: translate3d(0, 8%, 0) scale3d(1, 0.8, 1);
+  }
+}
+
+
+.botones-pag {
+  top: 10px;
+  position: absolute;
+}
+
+#prevPage {
+  all: unset;
+  position: relative;
+  left: 12px;
+  animation: izquierda .25s linear alternate infinite;
+}
+
+#prevPage:hover {
+  filter: invert(1);
+}
+
+#nextPage:hover {
+  filter: invert(1);
+}
+
+#nextPage {
+  all: unset;
+  position: relative;
+  left: 268px;
+  animation: derecha .25s linear alternate infinite;
+}
+
+#prevPage img {
+  width: 16px;
+  image-rendering: pixelated;
+  object-fit: cover;
+}
+
+#nextPage img {
+  width: 16px;
+  image-rendering: pixelated;
+  object-fit: cover;
+}
+
+@keyframes izquierda {
+  0% {
+    transform: translate3d(-20%, 0, 0);
+  }
+
+  40% {
+    transform: translate3d(-8%, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes derecha {
+  0% {
+    transform: translate3d(20%, 0, 0);
+  }
+
+  40% {
+    transform: translate3d(8%, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+#bibli-pagina {
+  font-family: 'Pixelify Sans';
+  text-shadow: 2px 2px 0 #000;
+  color: white;
+  left: 196px;
+  top: 48px;
+  position: absolute;
+  width: 248px; /*248*/
+  height: 25px;
+  z-index: 1;
+}
+
+#bibli-info {
+  font-family: 'Pixelify Sans';
+  text-shadow: 2px 2px 0 #000;
+  color: white;
+  left: 4px;
+  top: 200px;
+  position: absolute;
+  width: 148px;
+  height: 110px;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+#bibli-img {
+  left: 20px;
+  top: 56px;
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  image-rendering: pixelated;
+}
+
+#agregar {
+  filter: drop-shadow(0.5px 0.5px 4px #040018);
+  height: 400px;
+  width: 210px;
+  background-color: white;
+  overflow-y: scroll;
+  left: 70px;
+  top: 100px;
+}
+
+#formulario-pokemon {
+  padding: 0px 10px 0px 10px;
+}
+
+#perfil-img {
+  image-rendering: pixelated;
+  object-fit: cover;
+  height: 160px;
+  width: 160px;
+  animation: tamano 2s infinite;
+}
+
+@keyframes tamano {
+  0%, 20%, 40%, 80%, 100% {
+    transform: scale(1) translateY(0);
+  }
+
+  60% {
+    transform: scale(.8) translateY(-15px);
+  }
+}
+
+#bibli-img {
+  animation: saltoInicial .6s linear alternate infinite;
+}
+
+@keyframes saltoInicial {
+  0%, 20%, 40%, 80%, 100% {
+    transform: translateY(0);
+  }
+
+  60% {
+    transform: translateY(-10px);
+  }
+}
+
+#magikarp-juego {
+  top: 10%;
+  left: 70%;
+  width: 10%;
+  position: absolute;
+  image-rendering: pixelated;
+  z-index: -3;
+  transition-duration: 1s;
+  animation: magikarp-juego 8s infinite alternate-reverse;
+}
+
+#magikarp-gemelo{
+  top: 10%;
+  left: 70%;
+  position: absolute;
+  image-rendering: pixelated;
+  z-index: 0;
+}
+
+@keyframes magikarp-juego {
+from {
+  transform: rotate(10deg);
+}
+to {
+  transform: rotate(30deg);
+}
+}
+
+/*juego acerca*/
+
+#acerca {
+  filter: drop-shadow(0.5px 0.5px 4px #040018);
+  height: 400px;
+  width: 250px;
+  background-color: #FDEAEB;
+  right: 70px;
+  top: 100px;
+}
+
+#juego{
+  position: relative;
+  height: 300px;
+  width: 250px;
+  top: 80px;
+}
+
+#perder{
+  position: absolute;
+  width: 100%;
+  height: 10px;
+  bottom: 0px;
+}
+
+#pokemon-juego{
+  width: 70px;
+  height: 63.14px;
+  image-rendering: pixelated;
+  object-fit: cover;
+  position: absolute;
+  bottom: 10px;
+  left: calc(50% - 25px);
+}
+
+#nombres{
+  position: absolute;
+  font-family: 'Pixelify Sans';
+  color: rgb(229, 151, 189);
+  height: 80px;
+  width: 250px;
+  text-align: center;
+  padding: 20px;
+}
