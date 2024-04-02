@@ -14090,3 +14090,11 @@ legend {
   height: 32px;
   position: absolute;
 }
+
+#bibli{
+  background-image: url('assets/img/fondo-pc.png');
+}
+
+.bibli {
+  cursor: url("assets/img/puntero.png") 0 64, auto
+}

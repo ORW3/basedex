@@ -283,14 +283,9 @@
   -moz-user-select: none;
   -o-user-select: none;
   user-select: none;
-  background-image: url('https://media.discordapp.net/attachments/1219525220109389865/1219525327919906816/fondo-pc.png?ex=660b9e77&is=65f92977&hm=ea4896ab038ff3246d3333dea93beecb8137b316cc2eef3a84addcead44f3e8f&=&format=webp&quality=lossless&width=234&height=211');
   image-rendering: pixelated;
   background-repeat: no-repeat;
   background-size: 100%;
-}
-
-.bibli {
-  cursor: url("https://cdn.discordapp.com/attachments/1219525220109389865/1219528297923350539/puntero.png?ex=660ba13b&is=65f92c3b&hm=b90b9ba998784f59c19f682af60a6571f4a5ebcd03e06121c155539336963d63&") 0 64, auto
 }
 
 .tabla-poke {

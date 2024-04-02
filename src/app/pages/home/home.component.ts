@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Pokemon } from '../../models/pokemon';
 import { PokemonService } from '../../services/pokemon.service';
 import { Genero } from '../../models/genero';
-import { Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-home',
